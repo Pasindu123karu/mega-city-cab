@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Cab Service</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #1d1f21;
+            color: #fff;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .navbar a:hover {
+            background: #ff9800;
+            border-radius: 5px;
+        }
+
+        /* Hero Section with Transparent Black Overlay */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            background: url('./images/newbanner.webp') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section h1,
+        .hero-section p,
+        .hero-section .btn-primary {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background-color: #ff9800;
+            padding: 12px 25px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #e68900;
+        }
+        
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px 20px;
+            background: #fff;
+        }
+        .service-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .service-card h3 {
+            font-size: 24px;
+            margin: 15px 0;
+        }
+        .service-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Footer Style */
+        .footer {
+            background: linear-gradient(135deg, #1d1f21, #343a40);
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-left, .footer-middle, .footer-right {
+            width: 30%;
+        }
+
+        .footer-left h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .footer-left p {
+            font-size: 16px;
+        }
+
+        .footer-middle h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .footer-middle ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-middle li {
+            margin: 10px 0;
+        }
+
+        .footer-middle a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-middle a:hover {
+            color: #ff9800;
+        }
+
+        .footer-right h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .footer-right a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 10px 0;
+            background: #1d1f21;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Cab Service</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="service.html">Services</a>
+            <a href="book.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <h1>Ride with Comfort & Safety</h1>
+        <p>Book your ride anytime, anywhere with our reliable cab service.</p>
+        <button class="btn-primary" onclick="window.location.href='book.html'">Book a Ride</button>
+    </div>
+
+    <div class="services">
+        <div class="service-card">
+            <img src="./images/quick.jpg" alt="Quick Booking">
+            <h3>Quick Booking</h3>
+            <p>Book a cab in just a few clicks with our easy-to-use platform.</p>
+        </div>
+        <div class="service-card">
+            <img src="./images/drive-safe.webp" alt="Safe Rides">
+            <h3>Safe Rides</h3>
+            <p>All our drivers are trained and background-checked for your safety.</p>
+        </div>
+        <div class="service-card">
+            <img src="./images/Live.png" alt="24/7 Support">
+            <h3>24/7 Support</h3>
+            <p>Need assistance? Our support team is available anytime.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Cab Service</h3>
+                <p>Reliable, fast, and safe rides, just a click away.</p>
+            </div>
+            <div class="footer-middle">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Booking</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:support@cabservice.com">support@cabservice.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cab Service. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
