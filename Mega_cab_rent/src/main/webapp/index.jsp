@@ -24,7 +24,7 @@
 	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
 	rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/index-styles.css" rel="stylesheet" />
+<link href="css/newStyles.css" rel="stylesheet" />
 </head>
 <body id="page-top">
 	<!-- Navigation-->
@@ -55,11 +55,11 @@
 		</div>
 	</nav>
 	<!-- Masthead with Hero Section -->
-<header class="masthead" style="position: relative; width: 100%; height: 80vh; background: url('./images/newbanner.webp') no-repeat center center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white;">
+<header class="masthead" style="position: relative; width: 100%; height: 92vh; background: url('./images/newbanner.webp') no-repeat center center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white;">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 0;"></div>
     <h1 style="font-size: 48px; margin-bottom: 10px; font-weight: bold; position: relative; z-index: 1;">Ride with Comfort & Safety</h1>
     <p style="font-size: 20px; margin-bottom: 30px; position: relative; z-index: 1;">Book your ride anytime, anywhere with our reliable cab service.</p>
-    <button style="background-color: #ff9800; padding: 12px 25px; font-size: 16px; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; position: relative; z-index: 1;" onmouseover="this.style.backgroundColor='#e68900'" onmouseout="this.style.backgroundColor='#ff9800'" onclick="window.location.href='book.html'">
+    <button style="background-color: #ff9800; padding: 12px 25px; font-size: 16px; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; position: relative; z-index: 1;" onmouseover="this.style.backgroundColor='#e68900'" onmouseout="this.style.backgroundColor='#ff9800'" onclick="window.location.href='bookNow.jsp'">
         Book a Ride
     </button>
 </header>
@@ -92,7 +92,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/cabin.png"
+						<img class="img-fluid" src="./images/standerd.webp"
 							alt="..." />
 					</div>
 				</div>
@@ -107,7 +107,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/cake.png"
+						<img class="img-fluid" src="./images/premium.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -122,7 +122,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/circus.png"
+						<img class="img-fluid" src="./images/airport.webp"
 							alt="..." />
 					</div>
 				</div>
@@ -137,7 +137,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/game.png"
+						<img class="img-fluid" src="./images/outstation1.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -152,7 +152,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/safe.png"
+						<img class="img-fluid" src="./images/Corporate.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -167,7 +167,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/submarine.png"
+						<img class="img-fluid" src="./images/hourly.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -289,7 +289,7 @@
 				<div class="col-lg-4 mb-5 mb-lg-0">
 					<h4 class="text-uppercase mb-4">Location</h4>
 					<p class="lead mb-0">
-						2215 John Daniel Drive <br /> Clark, MO 65243
+						123 Cab Street, Colombo, <br />Sri Lanka
 					</p>
 				</div>
 				<!-- Footer Social Icons-->
@@ -306,10 +306,9 @@
 				</div>
 				<!-- Footer About Text-->
 				<div class="col-lg-4">
-					<h4 class="text-uppercase mb-4">About Freelancer</h4>
+					<h4 class="text-uppercase mb-4">About Mega City Cab</h4>
 					<p class="lead mb-0">
-						Freelance is a free to use, MIT licensed Bootstrap theme created
-						by <a href="http://startbootstrap.com">Start Bootstrap</a> .
+						Reliable, fast, and safe rides, just a click away. <a href="http://startbootstrap.com">Mega City Cab</a>
 					</p>
 				</div>
 			</div>
@@ -318,7 +317,7 @@
 	<!-- Copyright Section-->
 	<div class="copyright py-4 text-center text-white">
 		<div class="container">
-			<small>Copyright &copy; Your Website 2021</small>
+			<small>Copyright &copy; Mega City Cab 2025</small>
 		</div>
 	</div>
 	<!-- Portfolio Modals-->
@@ -337,8 +336,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Log
-									Cabin</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Standard Rides</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -349,13 +347,9 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/cabin.png" alt="..." />
+									src="./images/standerd.webp" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
+								<p class="mb-4">Affordable and reliable rides for everyday commuting.</p>
 								<button class="btn btn-primary" href="#!"
 									data-bs-dismiss="modal">
 									<i class="fas fa-times fa-fw"></i> Close Window
@@ -382,8 +376,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty
-									Cake</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Premium Rides</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -394,13 +387,9 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/cake.png" alt="..." />
+									src="./images/premium.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
+								<p class="mb-4">Luxury rides with top-class vehicles for ultimate comfort.</p>
 								<button class="btn btn-primary" href="#!"
 									data-bs-dismiss="modal">
 									<i class="fas fa-times fa-fw"></i> Close Window
@@ -427,8 +416,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus
-									Tent</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Airport Transfers</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -439,13 +427,9 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/circus.png" alt="..." />
+									src="./images/airport.webp" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
+								<p class="mb-4">Timely pickups and drop-offs to and from the airport.</p>
 								<button class="btn btn-primary" href="#!"
 									data-bs-dismiss="modal">
 									<i class="fas fa-times fa-fw"></i> Close Window
@@ -472,7 +456,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Outstation Trips</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -483,13 +467,9 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/game.png" alt="..." />
+									src="./images/outstation1.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
+								<p class="mb-4">Long-distance rides at reasonable rates with experienced drivers.</p>
 								<button class="btn btn-primary" href="#!"
 									data-bs-dismiss="modal">
 									<i class="fas fa-times fa-fw"></i> Close Window
@@ -516,8 +496,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked
-									Safe</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Corporate Travel</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -528,13 +507,9 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/safe.png" alt="..." />
+									src="./images/Corporate.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
+								<p class="mb-4">Professional chauffeur-driven rides for businesses.</p>
 								<button class="btn btn-primary" href="#!"
 									data-bs-dismiss="modal">
 									<i class="fas fa-times fa-fw"></i> Close Window
@@ -561,7 +536,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Hourly Rentals</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -572,13 +547,9 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/submarine.png" alt="..." />
+									src="./images/hourly.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
+								<p class="mb-4">Book a cab for a flexible time period with easy billing.</p>
 								<button class="btn btn-primary" href="#!"
 									data-bs-dismiss="modal">
 									<i class="fas fa-times fa-fw"></i> Close Window

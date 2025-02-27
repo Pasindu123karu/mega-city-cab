@@ -1,3 +1,8 @@
+<%
+	if(session.getAttribute("name")==null){
+		response.sendRedirect("login.jsp");
+	}
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -193,11 +198,8 @@
     <div class="navbar">
         <div class="logo">Cab Service</div>
         <div>
-            <a href="home.html">Home</a>
-            <a href="service.html">Services</a>
-            <a href="book.html">Booking</a>
-            <a href="contact.html">Contact</a>
-            <a href="login">Login</a>
+            <a href="index.jsp">Home</a>
+            <a href="login"><%=session.getAttribute("name") %></a>
         </div>
     </div>
 

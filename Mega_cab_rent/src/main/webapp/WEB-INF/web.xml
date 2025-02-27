@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+    
     <display-name>Mega_cab_rent</display-name>
+
+    <!-- Servlet Configuration for ViewUsersServlet -->
+    <servlet>
+        <servlet-name>ViewUsersServlet</servlet-name>
+        <servlet-class>com.megacab.registration.ViewUsersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewUsersServlet</servlet-name>
+        <url-pattern>/viewUsers</url-pattern>
+    </servlet-mapping>
 
     <!-- Welcome file list -->
     <welcome-file-list>
@@ -12,15 +28,5 @@
         <welcome-file>default.htm</welcome-file>
     </welcome-file-list>
 
-    <!-- Servlet for Register -->
-    <servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.yourpackage.servlet.RegisterServlet</servlet-class> <!-- Replace with your actual package path -->
-    </servlet>
-
-    <!-- Servlet Mapping -->
-    <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/RegisterServlet</url-pattern>
-    </servlet-mapping>
 </web-app>
+</element>
