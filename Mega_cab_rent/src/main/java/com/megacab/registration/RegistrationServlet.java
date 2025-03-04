@@ -28,16 +28,21 @@ public class RegistrationServlet extends HttpServlet {
 		String uemail = request.getParameter("email");
 		String upwd = request.getParameter("pass");
 		String umobile = request.getParameter("contact");
+		String uaddress = request.getParameter("address");
+		String unic = request.getParameter("nic");
+
 		RequestDispatcher dispatcher = null;
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mega_city_cab?useSSL=false","root","Hprk@1234");
-			PreparedStatement pst = con.prepareStatement("insert into users(uname,upwd,uemail,umobile) values(?,?,?,?) ");
+			PreparedStatement pst = con.prepareStatement("insert into users(uname,upwd,uemail,umobile,uaddress,unic) values(?,?,?,?,?,?) ");
 			pst.setString(1, uname);
 			pst.setString(2, upwd);
 			pst.setString(3, uemail);
 			pst.setString(4, umobile);
+			pst.setString(5, uaddress);
+			pst.setString(6, unic);
 			
 			int rowCount =  pst.executeUpdate();
 			dispatcher = request.getRequestDispatcher("registration.jsp");

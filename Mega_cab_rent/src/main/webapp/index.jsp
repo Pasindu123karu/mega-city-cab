@@ -48,6 +48,8 @@
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="help.html">Help</a></li>
 					<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="logout"><%=session.getAttribute("name") %></a></li>
 				</ul>
@@ -59,7 +61,7 @@
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 0;"></div>
     <h1 style="font-size: 48px; margin-bottom: 10px; font-weight: bold; position: relative; z-index: 1;">Ride with Comfort & Safety</h1>
     <p style="font-size: 20px; margin-bottom: 30px; position: relative; z-index: 1;">Book your ride anytime, anywhere with our reliable cab service.</p>
-    <button style="background-color: #ff9800; padding: 12px 25px; font-size: 16px; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; position: relative; z-index: 1;" onmouseover="this.style.backgroundColor='#e68900'" onmouseout="this.style.backgroundColor='#ff9800'" onclick="window.location.href='bookNow.jsp'">
+    <button style="background-color: #ff9800; padding: 12px 25px; font-size: 16px; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; position: relative; z-index: 1;" onmouseover="this.style.backgroundColor='#e68900'" onmouseout="this.style.backgroundColor='#ff9800'" onclick="window.location.href='booking.jsp'">
         Book a Ride
     </button>
 </header>

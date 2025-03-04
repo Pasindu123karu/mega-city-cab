@@ -37,6 +37,22 @@
 								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
 									type="email" name="email" id="email" placeholder="Your Email" />
 							</div>
+								<div class="form-group">
+								<label for="contact"><i class="zmdi zmdi-phone"></i></label>
+								<input type="text" name="contact" id="contact"
+									placeholder="Contact no" />
+							</div>
+							<div class="form-group">
+								<label for="address"><i class="zmdi zmdi-city"></i></label>
+								<input type="text" name="address" id="address"
+									placeholder="Address" />
+							</div>
+							
+							<div class="form-group">
+								<label for="nic"><i class="zmdi zmdi-card"></i></label>
+								<input type="text" name="nic" id="nic"
+									placeholder="Nic" />
+							</div>
 							<div class="form-group">
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
 									type="password" name="pass" id="pass" placeholder="Password" />
@@ -45,11 +61,6 @@
 								<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="password" name="re_pass" id="re_pass"
 									placeholder="Repeat your password" />
-							</div>
-							<div class="form-group">
-								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="text" name="contact" id="contact"
-									placeholder="Contact no" />
 							</div>
 							<div class="form-group">
 								<input type="checkbox" name="agree-term" id="agree-term"

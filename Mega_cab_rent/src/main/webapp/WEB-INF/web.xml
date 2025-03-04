@@ -4,8 +4,19 @@
          xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          id="WebApp_ID" version="4.0">
-    
+
     <display-name>Mega_cab_rent</display-name>
+
+    <!-- Servlet Configuration for BookingServlet -->
+    <servlet>
+        <servlet-name>BookingServlet</servlet-name>
+        <servlet-class>com.megacab.registration.NewBookingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BookingServlet</servlet-name>
+        <url-pattern>/BookingServlet</url-pattern>
+    </servlet-mapping>
 
     <!-- Servlet Configuration for ViewUsersServlet -->
     <servlet>
