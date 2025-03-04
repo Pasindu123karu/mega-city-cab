@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Help - Mega City Cab</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF8DC; /* Light yellow tint */
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #FFC107; /* Taxi Yellow */
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #000; /* Black for contrast */
+            border-bottom: 2px solid #FFC107;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        p, li {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .faq {
+            margin-top: 30px;
+        }
+        .faq h3 {
+            color: #FFC107;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        .faq p {
+            margin-left: 15px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Floating Home Button */
+        .home-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FFC107; /* Taxi Yellow */
+            color: #000; /* Black text */
+            padding: 12px 18px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .home-btn:hover {
+            background-color: #FFA000; /* Darker Yellow */
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Help - Mega City Cab</h1>
+        
+        <h2>Getting Started</h2>
+        <p>Welcome to Mega City Cab! Follow these simple steps to book your ride:</p>
+        <ul>
+            <li><strong>Register/Login:</strong> Sign up or log in securely with your credentials.</li>
+            <li><strong>Book a Cab:</strong> Enter your pickup location, destination, and preferred ride time.</li>
+            <li><strong>View Booking Details:</strong> Check your confirmed rides and current ride status.</li>
+            <li><strong>Print/Download Bill:</strong> View and download your ride invoice.</li>
+            <li><strong>Logout:</strong> Ensure you log out after usage to keep your account secure.</li>
+        </ul>
+        
+        <div class="faq">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <h3>1. How do I reset my password?</h3>
+            <p>Click on "Forgot Password" on the login page and follow the steps to reset your password.</p>
+            
+            <h3>2. Can I modify my booking?</h3>
+            <p>No, you will need to cancel your existing booking and create a new one.</p>
+            
+            <h3>3. How is my fare calculated?</h3>
+            <p>The fare is based on distance, time, and applicable taxes or discounts.</p>
+            
+            <h3>4. How do I contact customer support?</h3>
+            <p>You can reach our 24/7 support team via the contact page or call our helpline.</p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 Mega City Cab. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <!-- Floating Home Button -->
+    <button class="home-btn" onclick="goHome()">🏠 Home</button>
+
+    <script>
+        function goHome() {
+            window.location.href = 'index.jsp'; 
+        }
+    </script>
+</body>
+</html>
