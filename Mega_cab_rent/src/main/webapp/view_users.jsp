@@ -117,7 +117,7 @@
 
 <script>
     function goHome() {
-        window.location.href = 'adminHome.html'; // Change to your actual home page URL
+        window.location.href = 'adminHome.html'; 
     }
 </script>
 
