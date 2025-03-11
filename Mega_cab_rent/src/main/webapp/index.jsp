@@ -66,7 +66,7 @@
         <button style="background-color: #ff9800; padding: 12px 25px; font-size: 16px; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.backgroundColor='#e68900'" onmouseout="this.style.backgroundColor='#ff9800'" onclick="window.location.href='booking.jsp'">
             Book a Ride
         </button>
-        <button style="background-color: black; padding: 12px 25px; font-size: 16px; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='black'" onclick="window.location.href='UserBookingsServlet'">
+        <button style="background-color: black; padding: 12px 25px; font-size: 16px; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='black'" onclick="window.location.href='showAllBookings'">
             View Bookings
         </button>
     </div>
