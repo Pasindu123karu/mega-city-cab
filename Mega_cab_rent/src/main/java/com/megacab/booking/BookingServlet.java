@@ -95,7 +95,7 @@ public class BookingServlet extends HttpServlet {
                 ratePerKm = 110;
                 break;
             default:
-                ratePerKm = 50; // Default to budget price if an invalid type is selected
+                ratePerKm = 50; 
         }
 
         return ratePerKm * distance;

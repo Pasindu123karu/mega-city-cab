@@ -19,35 +19,35 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet("/login")
 public class Login extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		String uemail = request.getParameter("username");
-		String upwd = request.getParameter("password");
-		HttpSession session = request.getSession();
-		RequestDispatcher dispatcher = null;
-		
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mega_city_cab?useSSL=false","root","Hprk@1234");
-			PreparedStatement pst = con.prepareStatement("select * from users where uemail = ? and upwd = ?");
-			pst.setString(1, uemail);
-			pst.setString(2, upwd);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String uemail = request.getParameter("username");
+        String upwd = request.getParameter("password");
+        HttpSession session = request.getSession();
+        RequestDispatcher dispatcher = null;
 
-			ResultSet rs = pst.executeQuery();
-			if (rs.next()) {
-				session.setAttribute("name", rs.getString("uname"));
-				dispatcher = request.getRequestDispatcher("index.jsp");
-			}else {
-				request.setAttribute("status", "failed");
-				dispatcher = request.getRequestDispatcher("login.jsp");
-			}
-			dispatcher.forward(request, response);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver"); // Updated to latest MySQL driver
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mega_city_cab?useSSL=false", "root", "Hprk@1234");
 
+            // Check if the user exists in the database
+            PreparedStatement pst = con.prepareStatement("SELECT * FROM users WHERE uemail = ? AND upwd = ?");
+            pst.setString(1, uemail);
+            pst.setString(2, upwd);
+
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+                session.setAttribute("name", rs.getString("uname"));
+                dispatcher = request.getRequestDispatcher("index.jsp");
+            } else {
+                request.setAttribute("status", "failed"); // Ensure 'failed' is set correctly
+                dispatcher = request.getRequestDispatcher("login.jsp");
+            }
+            dispatcher.forward(request, response);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
