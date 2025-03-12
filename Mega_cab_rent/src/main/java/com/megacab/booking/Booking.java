@@ -9,6 +9,7 @@ package com.megacab.booking;
      private double distance;
      private String bookedDate;
      private double fare; 
+     private String driverName; // Add the driverName field
  
      // Default constructor
      public Booking() {}
@@ -34,6 +35,10 @@ package com.megacab.booking;
      public double getDistance() { return distance; }
      public String getBookedDate() { return bookedDate; }
      public double getFare() { return fare; } 
+     public String getDriverName() {
+         return driverName; // Getter for driverName
+     }
+
  
      // Setters
      public void setId(int id) { this.id = id; }
@@ -43,5 +48,8 @@ package com.megacab.booking;
      public void setVehicleType(String vehicleType) { this.vehicleType = vehicleType; }
      public void setDistance(double distance) { this.distance = distance; }
      public void setBookedDate(String bookedDate) { this.bookedDate = bookedDate; }
-     public void setFare(double fare) { this.fare = fare; } // New setter
+     public void setFare(double fare) { this.fare = fare; }
+     public void setDriverName(String driverName) {
+         this.driverName = driverName; // Setter for driverName
+     }
  }

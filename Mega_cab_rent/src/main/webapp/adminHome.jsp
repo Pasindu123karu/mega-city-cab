@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +32,7 @@
          text-align: center;
       }
       .header {
-         background-color: #FFC107; /* Taxi Yellow */
+         background-color: #FFC107;
          padding: 15px;
          border-radius: 8px;
          margin-bottom: 20px;
@@ -71,9 +73,16 @@
    </style>
 </head>
 <body>
+   <% 
+      HttpSession adminSession = request.getSession(false);
+      if (adminSession == null || adminSession.getAttribute("adminName") == null) {
+         response.sendRedirect("adminLogin.jsp");
+         return;
+      }
+   %>
    <div class="container">
       <div class="header">
-         <h1>Welcome to Admin home</h1>
+         <h1>Current Admin - <%= adminSession.getAttribute("adminName") %></h1>
       </div>
       <div class="content">
          <h1>Dashboard</h1>
@@ -81,11 +90,11 @@
          <div class="btn-container">
             <a href="viewUsers" class="btn">View Users</a>
             <a href="viewBookings" class="btn">View Bookings</a>
-            <a href="viewBookingDetails" class="btn">View Bookings Details</a>
+            <a href="manage_bookings.jsp" class="btn">Manage Bookings</a>
             <a href="viewDriver" class="btn">View Drivers</a>
             <a href="add_driver.jsp" class="btn">Add Driver</a>
-            <a href="modify_time.php" class="btn">Change Show Time</a>
-            <a href="logout.php" class="btn">Logout</a>
+            <a href="modify_time.jsp" class="btn">Change Show Time</a>
+            <a href="logout.jsp" class="btn">Logout</a>
          </div>
       </div>
    </div>

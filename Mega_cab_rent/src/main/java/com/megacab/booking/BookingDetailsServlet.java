@@ -1,5 +1,5 @@
 package com.megacab.booking;
-import com.megacab.booking.Driver;  // Import the Driver class
+import com.megacab.booking.Driver;  
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
