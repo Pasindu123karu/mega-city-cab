@@ -89,6 +89,7 @@
          <p>Manage your cab system efficiently.</p>
          <div class="btn-container">
             <a href="viewUsers" class="btn">View Users</a>
+            <a href="manageUsers" class="btn">Manage Users</a>
             <a href="viewBookings" class="btn">View Bookings</a>
             <a href="update_booking.jsp" class="btn">Manage Bookings</a>
             <a href="viewDriver" class="btn">View Drivers</a>
