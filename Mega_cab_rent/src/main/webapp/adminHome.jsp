@@ -94,6 +94,7 @@
             <a href="update_booking.jsp" class="btn">Manage Bookings</a>
             <a href="viewDriver" class="btn">View Drivers</a>
             <a href="add_driver.jsp" class="btn">Add Driver</a>
+			<a href="manage_drivers.jsp" class="btn">Manage Drivers</a>
             <a href="logout.jsp" class="btn">Logout</a>
          </div>
       </div>
