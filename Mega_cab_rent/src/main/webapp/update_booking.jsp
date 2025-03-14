@@ -87,8 +87,16 @@
     </style>
 </head>
 <body>
+<% 
+      HttpSession adminSession = request.getSession(false);
+      if (adminSession == null || adminSession.getAttribute("adminName") == null) {
+         response.sendRedirect("adminLogin.jsp");
+         return;
+      }
+   %>
 
 <h2>Update Booking</h2>
+<h3>Current Admin - <%= adminSession.getAttribute("adminName") %></h3>
 
 <%
     // Display success or error messages based on query parameters
