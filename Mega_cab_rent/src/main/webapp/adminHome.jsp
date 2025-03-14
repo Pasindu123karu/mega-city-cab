@@ -90,10 +90,9 @@
          <div class="btn-container">
             <a href="viewUsers" class="btn">View Users</a>
             <a href="viewBookings" class="btn">View Bookings</a>
-            <a href="manage_bookings.jsp" class="btn">Manage Bookings</a>
+            <a href="update_booking.jsp" class="btn">Manage Bookings</a>
             <a href="viewDriver" class="btn">View Drivers</a>
             <a href="add_driver.jsp" class="btn">Add Driver</a>
-            <a href="modify_time.jsp" class="btn">Change Show Time</a>
             <a href="logout.jsp" class="btn">Logout</a>
          </div>
       </div>

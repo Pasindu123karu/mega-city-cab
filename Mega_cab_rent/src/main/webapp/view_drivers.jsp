@@ -117,7 +117,7 @@
 
 <script>
     function goHome() {
-        window.location.href = 'adminHome.html';
+        window.location.href = 'adminHome.jsp';
     }
 </script>
 

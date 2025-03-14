@@ -97,6 +97,7 @@
             <th>Distance (km)</th>
             <th>Booked Date</th>
             <th>Fare (LKR)</th>
+            <th>Confirmed</th> <!-- New column for Booking Confirmed -->
         </tr>
         <%
             for (Booking booking : bookingList) {
@@ -110,6 +111,9 @@
                 <td><%= booking.getDistance() %></td>
                 <td><%= booking.getBookedDate() %></td>
                 <td><%= booking.getFare() %></td>
+                <td>
+                    <%= booking.isConfirmed() ? "Yes" : "No" %> <!-- Display "Yes" or "No" based on confirmed value -->
+                </td>
             </tr>
         <%
             }

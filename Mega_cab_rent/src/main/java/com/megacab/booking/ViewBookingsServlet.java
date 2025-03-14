@@ -29,7 +29,8 @@ public class ViewBookingsServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mega_city_cab?useSSL=false", "root", "Hprk@1234");
 
-            String query = "SELECT id, user_name, pickup, dropoff, vehicle, distance, fare, booked_date FROM bookings";
+            // Updated query to include 'confirmed' and 'driverId'
+            String query = "SELECT id, user_name, pickup, dropoff, vehicle, distance, fare, booked_date, confirmed, driver_id FROM bookings";
             PreparedStatement pst = con.prepareStatement(query);
             ResultSet rs = pst.executeQuery();
 
@@ -43,6 +44,8 @@ public class ViewBookingsServlet extends HttpServlet {
                 booking.setDistance(rs.getDouble("distance"));
                 booking.setFare(rs.getDouble("fare"));
                 booking.setBookedDate(rs.getString("booked_date"));
+                booking.setConfirmed(rs.getBoolean("confirmed")); // Setting confirmed status
+                booking.setDriverId(rs.getInt("driver_id")); // Setting driver ID
                 bookingList.add(booking);
             }
 

@@ -43,7 +43,7 @@ public class ShowAllBookingsServlet extends HttpServlet {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mega_city_cab?useSSL=false", "root", "Hprk@1234");
 
             // Modify query based on the username in session
-            String query = "SELECT id, user_name, pickup, dropoff, vehicle, distance, fare, booked_date FROM bookings WHERE user_name = ?";
+            String query = "SELECT id, user_name, pickup, dropoff, vehicle, distance, fare, booked_date, confirmed FROM bookings WHERE user_name = ?";
             PreparedStatement pst = con.prepareStatement(query);
             pst.setString(1, userName); // Filter based on the session's username
 
@@ -59,6 +59,7 @@ public class ShowAllBookingsServlet extends HttpServlet {
                 booking.setDistance(rs.getDouble("distance"));
                 booking.setFare(rs.getDouble("fare"));
                 booking.setBookedDate(rs.getString("booked_date"));
+                booking.setConfirmed(rs.getBoolean("confirmed")); // Retrieve confirmed status
                 bookingList.add(booking);
             }
 

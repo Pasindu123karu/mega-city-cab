@@ -94,6 +94,8 @@
             <th>Distance (km)</th>
             <th>Booked Date</th>
             <th>Fare (LKR)</th>
+            <th>Confirmed</th> <!-- New column for confirmed status -->
+            <th>Driver ID</th> <!-- New column for driver ID -->
         </tr>
         <%
             for (Booking booking : bookingList) {
@@ -107,6 +109,8 @@
                 <td><%= booking.getDistance() %></td>
                 <td><%= booking.getBookedDate() %></td>
                 <td><%= booking.getFare() %></td>
+                <td><%= booking.isConfirmed() ? "Yes" : "No" %></td> <!-- Displaying confirmed status -->
+                <td><%= booking.getDriverId() %></td> <!-- Displaying driver ID -->
             </tr>
         <%
             }
@@ -121,7 +125,7 @@
 
 <script>
     function goHome() {
-        window.location.href = 'adminHome.html'; 
+        window.location.href = 'adminHome.jsp'; 
     }
 </script>
 
