@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mega_city_cab?useSSL=false", "root", "Hprk@1234");
             
             // SQL query to check if the email and password match in the database
-            String query = "SELECT * FROM drivers WHERE demail = ? AND dpwd = ?";
+            String query = "SELECT driver_id, dname FROM drivers WHERE demail = ? AND dpwd = ?";
             PreparedStatement pst = con.prepareStatement(query);
             pst.setString(1, email);
             pst.setString(2, password);
@@ -44,23 +44,24 @@ public class LoginServlet extends HttpServlet {
             
             // Check if a record is found
             if (rs.next()) {
-                // Driver found, set status to success
-                String driverName = rs.getString("dname"); // Assuming the column for driver's name is 'dname'
-                
-                // Store the driver's email and name in the session
+                int driverId = rs.getInt("driver_id"); // 🔴 Change 'did' to 'driver_id'
+                String driverName = rs.getString("dname"); 
+
+                // Store details in the session
                 HttpSession session = request.getSession();
-                session.setAttribute("driverEmail", email); // Store email in session
-                session.setAttribute("driverName", driverName); // Store driver's name in session
-                
+                session.setAttribute("driverId", driverId); // 🔴 Storing driver_id properly
+                session.setAttribute("driverEmail", email);
+                session.setAttribute("driverName", driverName);
+
                 // Log for debugging
-                System.out.println("Login successful for driver: " + driverName);
-                
+                System.out.println("Login successful: driverId=" + driverId + ", driverName=" + driverName);
+
                 request.setAttribute("status", "success");
                 dispatcher = request.getRequestDispatcher("driver_home.jsp");  // Redirect to driver home page
             } else {
                 // Invalid credentials
                 request.setAttribute("status", "failed");
-                dispatcher = request.getRequestDispatcher("login.jsp");  // Redirect back to login page
+                dispatcher = request.getRequestDispatcher("driverlogin.jsp");  // Redirect back to login page
             }
 
             // Forward the request

@@ -74,7 +74,7 @@
             %>!
         </div>
         <div class="buttons">
-            <a href="<%= request.getContextPath() %>/view_active_trips.jsp" class="btn">View Active Trips</a>
+            <a href="<%= request.getContextPath() %>/DriversBookingsServlet" class="btn">View Active Trips</a>
             <a href="<%= request.getContextPath() %>/DriverProfileServlet" class="btn">View Profile</a>
             <a href="<%= request.getContextPath() %>/earnings.jsp" class="btn">View Earnings</a>
         </div>

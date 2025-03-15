@@ -14,21 +14,40 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebServlet("/viewActiveTrips")
-public class ViewActiveTripsServlet extends HttpServlet {
+@WebServlet("/DriversBookingsServlet")
+public class DriversBookingsServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Get driver ID from session
-        Integer driverId = (Integer) request.getSession().getAttribute("driverId");
 
-        if (driverId == null) {
-            // Handle case when driver is not logged in
-            response.sendRedirect("login.jsp"); // Redirect to login if driverId is null
+        // Retrieve session
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            System.out.println("Session is null. Redirecting to login.");
+            response.sendRedirect("login.jsp");
             return;
         }
+
+        Object driverIdObj = session.getAttribute("driverId");
+        if (driverIdObj == null) {
+            System.out.println("driverId not found in session. Redirecting to login.");
+            response.sendRedirect("login.jsp");
+            return;
+        }
+
+        int driverId;
+        try {
+            driverId = Integer.parseInt(driverIdObj.toString()); // Convert to int
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid driverId format. Redirecting to login.");
+            response.sendRedirect("login.jsp");
+            return;
+        }
+
+        System.out.println("Driver ID from session: " + driverId); // Debugging
 
         List<Booking> bookingList = new ArrayList<>();
         Connection con = null;
@@ -37,10 +56,9 @@ public class ViewActiveTripsServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mega_city_cab?useSSL=false", "root", "Hprk@1234");
 
-            // Query to fetch active trips for the logged-in driver
-            String query = "SELECT id, user_name, pickup, dropoff, vehicle, distance, fare, booked_date, confirmed, driver_id FROM bookings WHERE driver_id = ?";
+            String query = "SELECT id, user_name, pickup, dropoff, vehicle, distance, fare, booked_date, confirmed FROM bookings WHERE driver_id = ?";
             PreparedStatement pst = con.prepareStatement(query);
-            pst.setInt(1, driverId);  // Set driver ID dynamically
+            pst.setInt(1, driverId);
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()) {
@@ -54,14 +72,11 @@ public class ViewActiveTripsServlet extends HttpServlet {
                 booking.setFare(rs.getDouble("fare"));
                 booking.setBookedDate(rs.getString("booked_date"));
                 booking.setConfirmed(rs.getBoolean("confirmed"));
-                booking.setDriverId(rs.getInt("driver_id"));
+
                 bookingList.add(booking);
             }
 
-            // Set the booking list in the request attribute
             request.setAttribute("bookingList", bookingList);
-
-            // Forward to JSP to display active trips
             RequestDispatcher dispatcher = request.getRequestDispatcher("view_active_trips.jsp");
             dispatcher.forward(request, response);
 

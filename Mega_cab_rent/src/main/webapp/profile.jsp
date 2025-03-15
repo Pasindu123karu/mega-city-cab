@@ -21,7 +21,7 @@
             flex-direction: column;
         }
         h2 {
-            color: #FFC107;
+            color: #3498db;
             font-size: 28px;
             margin-bottom: 20px;
         }
